@@ -1,9 +1,15 @@
-```markdown
+
 # Medicine Recommendation System
 
 ## Overview
 
 This is a **Medicine Recommendation System** built using Python, Flask, and a machine learning model. The system suggests alternative medicines based on the selected medicine by the user. It uses a similarity-based recommendation approach to find medicines with similar properties or functions.
+
+## Dataset
+
+The dataset (`medicine.csv`) contains the following columns:
+- `Drug_Name`: The name of the medicine.
+- Other features relevant to the medicine (e.g., type, use-case, ingredients).
 
 ## Project Structure
 
@@ -21,12 +27,18 @@ This is a **Medicine Recommendation System** built using Python, Flask, and a ma
    
 2. **Similarity Model**:
    - A pre-trained machine learning model calculates the similarity between medicines based on their features.
+  
+  ## How It Works
+
+1. The **Jupyter Notebook** processes the dataset, computes medicine similarities, and saves the similarity matrix.
+2. The **Flask App** serves an HTML page where users can select a medicine.
+3. Once a medicine is selected, the app uses the pre-trained similarity matrix to recommend the top 5 most similar medicines.
 
 ## Setup and Installation
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Karthic-Elangovan/Medicine-Recommendation-System
    cd medicine-recommendation-system
    ```
 
@@ -42,15 +54,3 @@ This is a **Medicine Recommendation System** built using Python, Flask, and a ma
    ```bash
    python app.py
    ```
-
-## How It Works
-
-1. The **Jupyter Notebook** processes the dataset, computes medicine similarities, and saves the similarity matrix.
-2. The **Flask App** serves an HTML page where users can select a medicine.
-3. Once a medicine is selected, the app uses the pre-trained similarity matrix to recommend the top 5 most similar medicines.
-
-## Dataset
-
-The dataset (`medicine.csv`) contains the following columns:
-- `Drug_Name`: The name of the medicine.
-- Other features relevant to the medicine (e.g., type, use-case, ingredients).
